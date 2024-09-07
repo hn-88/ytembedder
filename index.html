@@ -33,8 +33,8 @@
 
     <br><br>
 
-    <!-- iFrame to display the URL -->
-    <iframe id="urlFrame" width="100%" height="500px"></iframe>
+    <!-- div to display the URL -->
+    <div id="urlFrame" ></div>
 
     <script>
         function extractYouTubeVideoID(url) {
@@ -63,10 +63,10 @@
             // Get the entered URL from the input field
             var initurl = document.getElementById('urlInput').value;
             var url = "https://www.youtube.com/embed/" + extractYouTubeVideoID(initurl);
-	    url += "?rel=0&autoplay=1"
+	    //url += "?rel=0&autoplay=1";
             
-            // Set the URL as the src attribute of the iframe
-            document.getElementById('urlFrame').src = url;
+            // Set the URL as the innerhtml attribute of the div
+            document.getElementById('urlFrame').innerhtml = "a href = '" + url + "' target='_blank'>" + url + "</a>";
 
             // Prevent the form from refreshing the page
             return false;
