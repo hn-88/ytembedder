@@ -63,17 +63,16 @@
             // Get the entered URL from the input field
             var initurl = document.getElementById('urlInput').value;
             var url = "https://www.youtube.com/embed/" + extractYouTubeVideoID(initurl);
-	    //url += "?rel=0&autoplay=1";
             
             // Set the URL as the innerhtml attribute of the div
-            document.getElementById('urlFrame').innerhtml = "a href = '" + url + "' target='_blank'>" + url + "</a>";
+            document.getElementById('urlFrame').innerhtml = "<a href='" + url + "' target='_blank'>" + url + "</a>";
 
             // Prevent the form from refreshing the page
             return false;
         }
     </script>
 
-  <iframe width="420" height="345" src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1" frameborder="0" allowfullscreen></iframe>
+ 
 	
 </body>
 
