@@ -65,7 +65,7 @@
             var url = "https://www.youtube.com/embed/" + extractYouTubeVideoID(initurl);
             
             // Set the URL as the innerhtml attribute of the div
-            document.getElementById('urlFrame').innerhtml = "<a href='" + url + "' target='_blank'>" + url + "</a>";
+            document.getElementById('urlFrame').innerHTML = "<a href='" + url + "' target='_blank'>" + url + "</a>";
 
             // Prevent the form from refreshing the page
             return false;
